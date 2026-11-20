@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">NoRompasLasPelotas</string>
+    <string name="notification_channel_name">Modo tranquilo activo</string>
+    <string name="notification_channel_description">Muestra que el modo sigue prendido.</string>
+    <string name="notification_title">Modo tranquilo activo</string>
+    <string name="notification_text">Tocá para abrir la app.</string>
+</resources>
