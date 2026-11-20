@@ -18,7 +18,7 @@ class ModoTileService : TileService() {
     }
     private fun actualizar() {
         qsTile?.state = if (EstadoCache.activo.value) Tile.STATE_ACTIVE else Tile.STATE_INACTIVE
-        qsTile?.label = "Modo tranquilo"
+        qsTile?.label = getString(io.github.javisala23.norompaslaspelotas.R.string.quiet_mode)
         qsTile?.updateTile()
     }
 }

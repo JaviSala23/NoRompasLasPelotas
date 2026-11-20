@@ -14,6 +14,7 @@ import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
 import io.github.javisala23.norompaslaspelotas.MainActivity
 import io.github.javisala23.norompaslaspelotas.R
+import io.github.javisala23.norompaslaspelotas.data.ConfigCache
 
 class ModoService : Service() {
     override fun onCreate() {
@@ -52,6 +53,7 @@ class ModoService : Service() {
     }
 
     private fun crearNotificacion(): Notification {
+        val config = ConfigCache.config.value
         val abrirApp = PendingIntent.getActivity(
             this,
             0,
@@ -63,7 +65,13 @@ class ModoService : Service() {
         return NotificationCompat.Builder(this, CHANNEL_ID)
             .setSmallIcon(R.drawable.ic_stat_app)
             .setContentTitle(getString(R.string.notification_title))
-            .setContentText(getString(R.string.notification_text))
+            .setContentText(
+                getString(
+                    R.string.notification_text,
+                    config.permitidos.size,
+                    config.appsSilenciadas.size,
+                ),
+            )
             .setContentIntent(abrirApp)
             .setCategory(NotificationCompat.CATEGORY_SERVICE)
             .setPriority(NotificationCompat.PRIORITY_LOW)

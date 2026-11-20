@@ -39,11 +39,23 @@ Al dar acceso a notificaciones: Ajustes → Apps → NoRompasLasPelotas → men�
 
 ## Cómo usarla
 
-1. Abrí **Permisos** y habilitá notificaciones, filtro de llamadas, acceso a
-   notificaciones y No molestar.
-2. Elegí NoRompasLasPelotas como pantalla de inicio predeterminada.
-3. Agregá las personas permitidas y elegí las apps a silenciar o mostrar.
-4. Activá el modo desde la app o desde el Tile de Ajustes rápidos.
+La primera vez, la app guía en tres pasos: permisos, personas que pueden llamar y
+apps para silenciar. Cada paso se puede saltear y completar más tarde.
+
+1. En **Permisos**, habilitá notificaciones, filtro de llamadas, acceso a
+   notificaciones, No molestar y la pantalla de inicio. La pantalla muestra cuántos
+   accesos ya están listos y explica para qué sirve cada uno.
+2. En **Personas**, agregá desde contactos o escribí nombre y número. Sólo esas
+   personas podrán llamarte mientras el modo esté activo.
+3. En **Apps silenciadas**, buscá y marcá las apps que no querés que interrumpan.
+   La primera vez se sugieren las redes sociales conocidas que estén instaladas.
+4. En **Pantalla tranquila**, elegí las pocas apps que querés tener visibles.
+5. Tocá el botón circular **Prender**. Para salir, tocá **Activo** o usá
+   “Volver al modo normal” desde la pantalla tranquila.
+
+Si Android 13 o posterior muestra “Configuración restringida” al habilitar el
+acceso a notificaciones, desplegá la ayuda de esa tarjeta: incluye los pasos y un
+acceso directo a la información de la app.
 
 Límites conocidos:
 

@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">NoRompasLasPelotas</string>
+    <string name="quiet_mode">Quiet mode</string>
+    <string name="back">Back</string>
+    <string name="good_morning">Good morning</string>
+    <string name="good_afternoon">Good afternoon</string>
+    <string name="good_evening">Good evening</string>
+    <string name="turn_on">Turn on</string>
+    <string name="active">Active</string>
+    <string name="status_summary">%1$d people can call · %2$d apps silenced</string>
+    <plurals name="missing_permissions"><item quantity="one">You need %d more permission</item><item quantity="other">You need %d more permissions</item></plurals>
+    <string name="people">People</string><string name="silenced_apps">Silenced apps</string><string name="quiet_screen">Quiet screen</string><string name="options">Options</string><string name="permissions">Permissions</string><string name="about">About</string>
+    <string name="permissions_ready">%1$d of %2$d ready</string>
+    <string name="notifications">Notifications</string><string name="notifications_reason">Allows the subtle active-mode notice.</string>
+    <string name="call_filter">Call filtering</string><string name="call_filter_reason">Only lets calls through from people you chose.</string>
+    <string name="notification_access">Notification access</string><string name="notification_access_reason">Silences the apps you selected.</string>
+    <string name="system_dnd">Do Not Disturb</string><string name="system_dnd_reason">Reduces other interruptions.</string>
+    <string name="default_home">Default home screen</string><string name="default_home_reason">Shows the quiet screen while active.</string>
+    <string name="ready">✓ Ready</string><string name="missing">Missing</string><string name="enable">Enable</string>
+    <string name="restricted_settings_help">Does Android show “Restricted setting”?</string>
+    <string name="restricted_settings_steps">Settings → Apps → NoRompasLasPelotas → ⋮ → Allow restricted settings</string>
+    <string name="open_app_settings">Open app info</string>
+    <string name="call_role_help">Choose NoRompasLasPelotas under “Caller ID &amp; spam app”.</string><string name="open_default_apps">Open default apps</string>
+    <string name="add">Add</string><string name="people_empty">You haven\'t added anyone yet. Whenever you want, choose who can call you.</string><string name="person_deleted">Person deleted</string><string name="undo">Undo</string><string name="delete_person">Delete %1$s</string>
+    <string name="add_person">Add person</string><string name="choose_contact">Choose from contacts</string><string name="name">Name</string><string name="phone_number">Phone number</string>
+    <string name="search_apps">Search apps</string><string name="social_suggestion">The first time, we select known social apps we find. You can change the selection.</string>
+    <string name="whatsapp_allowed">WhatsApp only from allowed people</string><string name="whatsapp_allowed_description">Uses the name shown by WhatsApp to decide.</string>
+    <string name="repeat_calls">Allow repeated calls</string><string name="repeat_calls_description">A second call from the same number within 15 minutes gets through.</string>
+    <string name="use_system_dnd">Use system Do Not Disturb</string><string name="use_system_dnd_description">Keeps alarms and media audio available.</string>
+    <string name="version_name">Version 0.2.0</string><string name="free_gpl">Free and open source, GPL-3.0</string><string name="no_internet">Does not use the Internet</string><string name="open_repository">Open repository</string>
+    <string name="welcome">Welcome</string><string name="step_of">Step %1$d of %2$d</string><string name="skip">Skip</string><string name="next">Next</string><string name="finish">Finish</string>
+    <string name="onboarding_permissions_title">First, permissions</string><string name="onboarding_permissions_body">Android asks separately for access to filter calls and lower the noise. Set them now or later.</string><string name="open_settings">Open Settings</string><string name="configure_permissions">Configure permissions</string>
+    <string name="onboarding_people_title">Who can call you</string><string name="onboarding_people_body">Add an important person. You can also do this later under People.</string><string name="people_added">%1$d people added</string>
+    <string name="onboarding_apps_title">Which apps to silence</string><string name="onboarding_apps_body">We suggest installed social apps. Review the selection at your pace.</string><string name="no_suggested_apps">We found no known social apps. You can choose other apps later.</string>
+    <string name="calm_phrase">There is nothing urgent here.</string><string name="return_normal">Return to normal mode</string><string name="settings">Settings</string>
+    <string name="notification_channel_name">Quiet mode active</string><string name="notification_channel_description">Shows that quiet mode remains on.</string><string name="notification_title">Quiet mode active</string><string name="notification_text">%1$d people can call · %2$d apps silenced</string>
+</resources>

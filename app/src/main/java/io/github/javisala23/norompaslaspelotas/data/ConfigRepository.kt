@@ -24,6 +24,8 @@ data class Config(
     val dejarPasarSiInsiste: Boolean = true,
     val usarNoMolestarDelSistema: Boolean = true,
     val appsInicio: List<String> = emptyList(),
+    val onboardingHecho: Boolean = false,
+    val sugerenciasAppsAplicadas: Boolean = false,
 )
 
 object ConfigCache {
@@ -34,7 +36,14 @@ class ConfigRepository(context: Context) {
     private val dataStore = context.applicationContext.configDataStore
     private val json = Json { ignoreUnknownKeys = true }
     val config: Flow<Config> = dataStore.data.map { preferencias ->
-        preferencias[CONFIG]?.let { runCatching { json.decodeFromString<Config>(it) }.getOrNull() } ?: Config()
+        val guardada = preferencias[CONFIG] ?: return@map Config()
+        val decodificada = runCatching { json.decodeFromString<Config>(guardada) }.getOrNull()
+            ?: return@map Config()
+        if (guardada.contains("\"onboardingHecho\"")) {
+            decodificada
+        } else {
+            decodificada.copy(onboardingHecho = true)
+        }
     }
 
     suspend fun guardar(config: Config) {
