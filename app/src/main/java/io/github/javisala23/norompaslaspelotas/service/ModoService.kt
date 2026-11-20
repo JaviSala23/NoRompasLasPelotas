@@ -78,7 +78,8 @@ class ModoService : Service() {
         private const val NOTIFICATION_ID = 1001
 
         fun iniciar(context: Context) {
-            ContextCompat.startForegroundService(context, Intent(context, ModoService::class.java))
+            // El filtrado no depende de este servicio: es sólo el aviso visible.
+            runCatching { ContextCompat.startForegroundService(context, Intent(context, ModoService::class.java)) }
         }
 
         fun detener(context: Context) {

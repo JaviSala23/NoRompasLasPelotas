@@ -1,52 +1,19 @@
-# Notas de Codex — E0 y E1
+# Notas de Codex — E2, E3 y E4
 
 Fecha: 2026-11-20
 
-Se implementaron únicamente E0 y E1 con el nombre visible **No Molestar**, el
-proyecto Gradle **NoMolestar** y el paquete
-`io.github.javisala23.nomolestar`. No se agregó el permiso `INTERNET`.
+Se implementaron configuración JSON en DataStore y cache en memoria, filtrado de
+llamadas con regla de insistencia, filtrado de notificaciones/WhatsApp, resguardo y
+restauración de No molestar, coordinación central en `ModoControl`, Tile, launcher
+tranquilo y las pantallas de configuración y permisos.
 
-## Archivos creados
+También se deshabilitó backup y transferencia, se agregaron queries acotadas para
+apps lanzables, se actualizó el README y se sumaron tests JVM para teléfonos,
+decisiones de llamada, nombres y notificaciones.
 
-- `.github/workflows/build.yml`
-- `.gitignore`
-- `LICENSE`
-- `README.md`
-- `settings.gradle.kts`
-- `build.gradle.kts`
-- `gradle.properties`
-- `gradle/libs.versions.toml`
-- `gradle/wrapper/gradle-wrapper.properties`
-- `gradlew`
-- `gradlew.bat`
-- `app/build.gradle.kts`
-- `app/proguard-rules.pro`
-- `app/src/main/AndroidManifest.xml`
-- `app/src/main/java/io/github/javisala23/nomolestar/MainActivity.kt`
-- `app/src/main/java/io/github/javisala23/nomolestar/MainViewModel.kt`
-- `app/src/main/java/io/github/javisala23/nomolestar/data/EstadoRepository.kt`
-- `app/src/main/java/io/github/javisala23/nomolestar/domain/EstadoModo.kt`
-- `app/src/main/java/io/github/javisala23/nomolestar/service/BootReceiver.kt`
-- `app/src/main/java/io/github/javisala23/nomolestar/service/ModoService.kt`
-- `app/src/main/java/io/github/javisala23/nomolestar/ui/NoMolestarApp.kt`
-- `app/src/main/java/io/github/javisala23/nomolestar/ui/theme/Color.kt`
-- `app/src/main/java/io/github/javisala23/nomolestar/ui/theme/Theme.kt`
-- `app/src/main/java/io/github/javisala23/nomolestar/ui/theme/Type.kt`
-- `app/src/main/res/drawable/ic_stat_no_molestar.xml`
-- `app/src/main/res/values/strings.xml`
-- `app/src/main/res/values/themes.xml`
-- `app/src/main/res/values-night/themes.xml`
-- `app/src/test/java/io/github/javisala23/nomolestar/domain/EstadoModoTest.kt`
-- `docs/NOTAS_CODEX.md`
+Validación manual pendiente en un teléfono: rol de llamadas, variantes de
+notificación de WhatsApp, restauración DND y elección del launcher.
 
-## Verificación y dudas
-
-- No se ejecutaron Gradle, tests ni lint porque el entorno no tiene red y, por
-  pedido, no se generó `gradle-wrapper.jar`.
-- Falta que Javi genere o agregue localmente
-  `gradle/wrapper/gradle-wrapper.jar` antes de usar el wrapper o el workflow.
-- En Android 13 o posterior, la pantalla de permisos abre directamente los
-  Ajustes de notificaciones y no dispara diálogos. Conviene validar en el celu
-  de referencia que ese flujo resulte claro antes de sumar los permisos de
-  E2–E4.
-- No quedaron dudas de producto para E0–E1.
+No se pudo ejecutar Gradle dentro del sandbox: aun con caché local escribible,
+`--offline` y `--no-daemon`, Gradle 8.14.3 no inicia su manejador de locks porque
+el entorno no expone una IP wildcard utilizable. `git diff --check` sí quedó limpio.

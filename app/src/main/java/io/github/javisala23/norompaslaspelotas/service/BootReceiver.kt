@@ -4,6 +4,7 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import io.github.javisala23.norompaslaspelotas.data.EstadoRepository
+import io.github.javisala23.norompaslaspelotas.data.ConfigRepository
 import io.github.javisala23.norompaslaspelotas.domain.EstadoModo
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -17,9 +18,10 @@ class BootReceiver : BroadcastReceiver() {
         val pendingResult = goAsync()
         CoroutineScope(Dispatchers.IO).launch {
             try {
+                ConfigRepository(context).cargarCache()
                 val activo = EstadoRepository(context).activo.first()
                 if (EstadoModo.restaurarAlArrancar(activo).debeEjecutarServicio) {
-                    ModoService.iniciar(context)
+                    ModoControl.activar(context)
                 }
             } finally {
                 pendingResult.finish()
