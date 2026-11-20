@@ -11,6 +11,24 @@ Bajá el último `.apk` desde
 abrilo en el celu y aceptá "instalar apps desconocidas" para el navegador.
 Funciona en Android 10 o más nuevo. Es gratis y lo va a ser siempre.
 
+### Si Google Play Protect la bloquea
+
+Play Protect frena las apps que no vienen de Play Store y que filtran llamadas o
+leen notificaciones (justo lo que hace esta, sin Internet y con el código a la vista).
+
+1. Play Store → tu foto → **Play Protect** → ⚙️ → desactivá
+   **"Analizar apps con Play Protect"**.
+2. Instalá el `.apk`.
+3. Volvé a activar el análisis.
+
+Alternativa desde una compu: `adb install NoRompasLasPelotas-*.apk` con el celu
+conectado por USB y la depuración USB activada.
+
+### Si Android dice "Configuración restringida"
+
+Al dar acceso a notificaciones: Ajustes → Apps → NoRompasLasPelotas → menú ⋮ →
+**"Permitir configuración restringida"**, y volvé a intentarlo.
+
 ## Principios
 
 - Todo queda en el teléfono: la app no pide acceso a Internet.
