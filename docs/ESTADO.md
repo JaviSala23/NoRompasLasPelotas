@@ -34,3 +34,10 @@
 - Release local: NRLP_KEYSTORE=~/android-tools/claves/norompas-release.jks NRLP_PASSWORD=$(cat ~/android-tools/claves/clave.txt) ./gradlew assembleRelease
 - SIN probar en dispositivo (no hay KVM para emulador). Pendiente: prueba real de Javi
   (llamada común permitida/no permitida, insistencia, WhatsApp mensaje y llamada, launcher, tile).
+
+## 2026-11-20 (v0.2.0)
+- Javi instaló 0.1.0 (Play Protect la frenaba: README explica cómo). Bug: rol de filtro de llamadas
+  se pedía con startActivity → arreglado con ActivityResult + ayuda a Apps predeterminadas.
+- v0.2.0 publicada: rediseño (Codex, spec docs/CODEX_V0_2.md) + arreglos de auditoría (modifier que
+  descartaba clickable, recurso del manifest con variante en inglés).
+- Pendiente: que Javi pruebe 0.2.0 en el celu (rol de llamadas, WhatsApp, launcher).
