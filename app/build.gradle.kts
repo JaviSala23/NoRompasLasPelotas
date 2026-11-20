@@ -19,9 +19,30 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    // Firma de release: sólo si están las variables (la clave nunca va al repo).
+    val keystore = System.getenv("NRLP_KEYSTORE")
+    signingConfigs {
+        if (keystore != null) {
+            create("release") {
+                storeFile = file(keystore)
+                storePassword = System.getenv("NRLP_PASSWORD")
+                keyAlias = System.getenv("NRLP_ALIAS") ?: "norompas"
+                keyPassword = System.getenv("NRLP_PASSWORD")
+            }
+        }
+    }
+
+    // F-Droid pide no incluir el bloque de dependencias firmado por Google.
+    dependenciesInfo {
+        includeInApk = false
+        includeInBundle = false
+    }
+
     buildTypes {
         release {
-            isMinifyEnabled = false
+            if (keystore != null) signingConfig = signingConfigs.getByName("release")
+            isMinifyEnabled = true
+            isShrinkResources = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro",

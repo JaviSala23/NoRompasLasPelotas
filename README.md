@@ -4,6 +4,13 @@ NoRompasLasPelotas es una app Android libre para bajar el ruido del teléfono du
 rato. Filtra llamadas y notificaciones, configura No molestar y ofrece una pantalla
 de inicio tranquila. Todo se puede apagar con un toque.
 
+## Descargar
+
+Bajá el último `.apk` desde
+[Releases](https://github.com/JaviSala23/NoRompasLasPelotas/releases/latest),
+abrilo en el celu y aceptá "instalar apps desconocidas" para el navegador.
+Funciona en Android 10 o más nuevo. Es gratis y lo va a ser siempre.
+
 ## Principios
 
 - Todo queda en el teléfono: la app no pide acceso a Internet.
@@ -20,12 +27,14 @@ de inicio tranquila. Todo se puede apagar con un toque.
 3. Agregá las personas permitidas y elegí las apps a silenciar o mostrar.
 4. Activá el modo desde la app o desde el Tile de Ajustes rápidos.
 
-Límites conocidos del plan completo:
+Límites conocidos:
 
 - Las llamadas de WhatsApp sólo se silencian; al otro teléfono le siguen sonando.
 - WhatsApp no expone números: el filtro usa el nombre agendado y una llamada no
   permitida puede sonar un instante antes de silenciarse.
-- El launcher se tendrá que elegir una vez, a mano, desde Ajustes.
+- La pantalla de inicio se elige una vez, a mano, desde Ajustes.
+- Si una persona no permitida llama dos veces en 15 minutos, la segunda pasa
+  (por si es una urgencia). Se puede apagar en Opciones.
 
 ## Compilar
 
