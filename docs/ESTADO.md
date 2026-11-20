@@ -24,3 +24,13 @@
   ¡Hacer backup! Si se pierde, las actualizaciones no se pueden instalar encima.
 - Pendiente E5: build release firmado, crear repo público JaviSala23/NoRompasLasPelotas,
   GitHub Release con el APK, avisar link por kiro-avisar.
+
+## 2026-11-20 (cierre)
+- E2-E4 hechos (Codex) + auditoría Claude: arreglado matching de números AR (+54 9 / 0 / 15),
+  carrera al arrancar en frío (Arranque.listo), guardas de API 29/30, FGS que no rompe el filtrado.
+- Carpeta renombrada a ~/Documentos/code/NoRompasLasPelotas.
+- Repo público: https://github.com/JaviSala23/NoRompasLasPelotas
+- Release v0.1.0 (prerelease, APK firmado 2.4 MB con R8).
+- Release local: NRLP_KEYSTORE=~/android-tools/claves/norompas-release.jks NRLP_PASSWORD=$(cat ~/android-tools/claves/clave.txt) ./gradlew assembleRelease
+- SIN probar en dispositivo (no hay KVM para emulador). Pendiente: prueba real de Javi
+  (llamada común permitida/no permitida, insistencia, WhatsApp mensaje y llamada, launcher, tile).
