@@ -47,3 +47,10 @@
 - Arreglo: el filtro de notificaciones nunca cancela CATEGORY_ALARM (aunque el Reloj esté silenciado).
   El DND del sistema ya dejaba pasar alarmas. Sin probar en dispositivo.
 - v0.2.1 publicada: https://github.com/JaviSala23/NoRompasLasPelotas/releases/tag/v0.2.1
+
+## 2026-11-23 (v0.3.0 en curso — UI/UX)
+Javi pidió las 4: (1) Inicio más claro: tarjeta de estado grande que cambia de color, qué está
+pasando en palabras, filas con el valor actual, grupos. (2) Registro "Lo que frené" (local, 7 días,
+DataStore registro_bloqueos). (3) Horario: días + desde/hasta, AlarmManager inexacto
+(setAndAllowWhileIdle, sin permiso de alarmas exactas), HorarioReceiver; al empezar prende, al
+terminar apaga. (4) Pulir: apps cargan en segundo plano con secciones, personas con vacío mejor.
