@@ -34,7 +34,10 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ui.inicio.InicioActivity" android:exported="true">
+        <activity
+            android:name=".ui.inicio.InicioActivity"
+            android:exported="true"
+            android:theme="@style/Theme.App.Inicio">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.HOME" />

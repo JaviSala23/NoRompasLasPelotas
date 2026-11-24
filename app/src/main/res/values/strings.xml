@@ -54,7 +54,7 @@
     <string name="repeat_calls_description">La segunda llamada del mismo número en 15 minutos pasa.</string>
     <string name="use_system_dnd">Usar No molestar del sistema</string>
     <string name="use_system_dnd_description">Mantiene alarmas y contenido multimedia.</string>
-    <string name="version_name">Versión 0.3.0</string>
+    <string name="version_name">Versión 0.3.1</string>
     <string name="free_gpl">Libre y gratis, GPL-3.0</string>
     <string name="no_internet">No usa Internet</string>
     <string name="open_repository">Abrir repositorio</string>
@@ -147,4 +147,19 @@
     <string name="silenced_section">En silencio</string>
     <string name="other_apps_section">Otras apps</string>
     <string name="people_intro">Cuando el modo está activo, sólo pasan las llamadas de estas personas. Las alarmas suenan igual.</string>
+    <string name="all_apps">Todas las apps</string>
+    <string name="swipe_hint">Deslizá hacia arriba para ver todas</string>
+    <string name="hidden_app_note">Oculta mientras estás tranquilo</string>
+    <string name="pause_title">Respirá</string>
+    <string name="pause_body">¿De verdad querés abrir %1$s ahora?</string>
+    <string name="pause_wait">Esperá %1$d…</string>
+    <string name="open_anyway">Abrir igual</string>
+    <string name="better_not">Mejor no</string>
+    <string name="background_title">Fondo de la pantalla tranquila</string>
+    <string name="background_black">Negro</string>
+    <string name="background_graphite">Grafito</string>
+    <string name="background_forest">Bosque</string>
+    <string name="background_sand">Arena</string>
+    <string name="no_results">No hay apps con ese nombre</string>
+    <string name="detox_note">Mientras está activo, las apps silenciadas no aparecen. Si buscás una, te pide una pausa antes de abrirla.</string>
 </resources>

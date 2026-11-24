@@ -28,7 +28,11 @@ data class Config(
     val onboardingHecho: Boolean = false,
     val sugerenciasAppsAplicadas: Boolean = false,
     val horario: Horario = Horario(),
+    val fondoInicio: FondoInicio = FondoInicio.NEGRO,
 )
+
+/** Color liso de la pantalla tranquila. */
+enum class FondoInicio { NEGRO, GRAFITO, BOSQUE, ARENA }
 
 object ConfigCache {
     val config = MutableStateFlow(Config())

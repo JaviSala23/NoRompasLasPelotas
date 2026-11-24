@@ -27,7 +27,7 @@
     <string name="whatsapp_allowed">WhatsApp only from allowed people</string><string name="whatsapp_allowed_description">Uses the name shown by WhatsApp to decide.</string>
     <string name="repeat_calls">Allow repeated calls</string><string name="repeat_calls_description">A second call from the same number within 15 minutes gets through.</string>
     <string name="use_system_dnd">Use system Do Not Disturb</string><string name="use_system_dnd_description">Keeps alarms and media audio available.</string>
-    <string name="version_name">Version 0.3.0</string><string name="free_gpl">Free and open source, GPL-3.0</string><string name="no_internet">Does not use the Internet</string><string name="open_repository">Open repository</string>
+    <string name="version_name">Version 0.3.1</string><string name="free_gpl">Free and open source, GPL-3.0</string><string name="no_internet">Does not use the Internet</string><string name="open_repository">Open repository</string>
     <string name="welcome">Welcome</string><string name="step_of">Step %1$d of %2$d</string><string name="skip">Skip</string><string name="next">Next</string><string name="finish">Finish</string>
     <string name="onboarding_permissions_title">First, permissions</string><string name="onboarding_permissions_body">Android asks separately for access to filter calls and lower the noise. Set them now or later.</string><string name="open_settings">Open Settings</string><string name="configure_permissions">Configure permissions</string>
     <string name="onboarding_people_title">Who can call you</string><string name="onboarding_people_body">Add an important person. You can also do this later under People.</string><string name="people_added">%1$d people added</string>
@@ -101,4 +101,19 @@
     <string name="silenced_section">Silenced</string>
     <string name="other_apps_section">Other apps</string>
     <string name="people_intro">While quiet mode is on, only calls from these people get through. Alarms still ring.</string>
+    <string name="all_apps">All apps</string>
+    <string name="swipe_hint">Swipe up to see all apps</string>
+    <string name="hidden_app_note">Hidden while you rest</string>
+    <string name="pause_title">Breathe</string>
+    <string name="pause_body">Do you really want to open %1$s now?</string>
+    <string name="pause_wait">Wait %1$d…</string>
+    <string name="open_anyway">Open anyway</string>
+    <string name="better_not">Better not</string>
+    <string name="background_title">Quiet screen background</string>
+    <string name="background_black">Black</string>
+    <string name="background_graphite">Graphite</string>
+    <string name="background_forest">Forest</string>
+    <string name="background_sand">Sand</string>
+    <string name="no_results">No apps with that name</string>
+    <string name="detox_note">While it is on, silenced apps are hidden. If you search for one, it asks for a pause before opening it.</string>
 </resources>

@@ -58,3 +58,11 @@ terminar apaga. (4) Pulir: apps cargan en segundo plano con secciones, personas 
   grupos con valores), RegistroScreen, HorarioScreen + Programador/HorarioReceiver, paleta completa
   (antes M3 metía lila en las tarjetas), apps en segundo plano. Build+tests (HorarioTest) +lint OK.
   Sin probar en dispositivo. Pendiente: que Javi lo pruebe.
+
+## 2026-11-24 (v0.3.1 — pantalla tranquila "detox")
+- Pedido de Javi: pantalla negra con apps en texto blanco y efectos; referencia: launcher minimalista
+  de yankodesign (hora + pocas apps, deslizar a todas, ocultar adictivas, color de fondo).
+- Hecho en InicioActivity: fondo liso elegible (Negro/Grafito/Bosque/Arena, en Opciones), cascada al
+  entrar, punto que respira, deslizar hacia arriba → todas las apps; con el modo activo las silenciadas
+  se ocultan y sólo aparecen buscándolas, con pausa de 5 s ("Respirá") antes de abrirlas.
+- Publicada pre-release v0.3.1. Sin probar en dispositivo.
