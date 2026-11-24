@@ -46,3 +46,4 @@
 - Ya no hay Codex: Claude implementa directo.
 - Arreglo: el filtro de notificaciones nunca cancela CATEGORY_ALARM (aunque el Reloj esté silenciado).
   El DND del sistema ya dejaba pasar alarmas. Sin probar en dispositivo.
+- v0.2.1 publicada: https://github.com/JaviSala23/NoRompasLasPelotas/releases/tag/v0.2.1
