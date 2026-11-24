@@ -13,19 +13,31 @@ import kotlinx.coroutines.launch
 
 class BootReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
-        if (intent.action != Intent.ACTION_BOOT_COMPLETED) return
+        if (intent.action !in ACCIONES) return
 
         val pendingResult = goAsync()
         CoroutineScope(Dispatchers.IO).launch {
             try {
                 ConfigRepository(context).cargarCache()
-                val activo = EstadoRepository(context).activo.first()
-                if (EstadoModo.restaurarAlArrancar(activo).debeEjecutarServicio) {
-                    ModoControl.activar(context)
+                if (intent.action == Intent.ACTION_BOOT_COMPLETED) {
+                    val activo = EstadoRepository(context).activo.first()
+                    if (EstadoModo.restaurarAlArrancar(activo).debeEjecutarServicio) {
+                        ModoControl.activar(context)
+                    }
                 }
+                Programador.reprogramar(context)
             } finally {
                 pendingResult.finish()
             }
         }
+    }
+
+    private companion object {
+        val ACCIONES = setOf(
+            Intent.ACTION_BOOT_COMPLETED,
+            Intent.ACTION_MY_PACKAGE_REPLACED,
+            Intent.ACTION_TIME_CHANGED,
+            Intent.ACTION_TIMEZONE_CHANGED,
+        )
     }
 }

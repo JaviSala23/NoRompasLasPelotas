@@ -27,11 +27,78 @@
     <string name="whatsapp_allowed">WhatsApp only from allowed people</string><string name="whatsapp_allowed_description">Uses the name shown by WhatsApp to decide.</string>
     <string name="repeat_calls">Allow repeated calls</string><string name="repeat_calls_description">A second call from the same number within 15 minutes gets through.</string>
     <string name="use_system_dnd">Use system Do Not Disturb</string><string name="use_system_dnd_description">Keeps alarms and media audio available.</string>
-    <string name="version_name">Version 0.2.0</string><string name="free_gpl">Free and open source, GPL-3.0</string><string name="no_internet">Does not use the Internet</string><string name="open_repository">Open repository</string>
+    <string name="version_name">Version 0.3.0</string><string name="free_gpl">Free and open source, GPL-3.0</string><string name="no_internet">Does not use the Internet</string><string name="open_repository">Open repository</string>
     <string name="welcome">Welcome</string><string name="step_of">Step %1$d of %2$d</string><string name="skip">Skip</string><string name="next">Next</string><string name="finish">Finish</string>
     <string name="onboarding_permissions_title">First, permissions</string><string name="onboarding_permissions_body">Android asks separately for access to filter calls and lower the noise. Set them now or later.</string><string name="open_settings">Open Settings</string><string name="configure_permissions">Configure permissions</string>
     <string name="onboarding_people_title">Who can call you</string><string name="onboarding_people_body">Add an important person. You can also do this later under People.</string><string name="people_added">%1$d people added</string>
     <string name="onboarding_apps_title">Which apps to silence</string><string name="onboarding_apps_body">We suggest installed social apps. Review the selection at your pace.</string><string name="no_suggested_apps">We found no known social apps. You can choose other apps later.</string>
     <string name="calm_phrase">There is nothing urgent here.</string><string name="return_normal">Return to normal mode</string><string name="settings">Settings</string>
     <string name="notification_channel_name">Quiet mode active</string><string name="notification_channel_description">Shows that quiet mode remains on.</string><string name="notification_title">Quiet mode active</string><string name="notification_text">%1$d people can call · %2$d apps silenced</string>
+    <string name="status_on_title">Quiet mode is on</string>
+    <string name="status_off_title">Quiet mode is off</string>
+    <string name="status_off_body">Your phone works as usual.</string>
+    <string name="turn_off">Turn off</string>
+    <string name="nobody_can_call">No calls get through</string>
+    <plurals name="people_can_call">
+        <item quantity="one">Only calls from %d person get through</item>
+        <item quantity="other">Only calls from %d people get through</item>
+    </plurals>
+    <plurals name="apps_silenced_line">
+        <item quantity="one">%d app silenced</item>
+        <item quantity="other">%d apps silenced</item>
+    </plurals>
+    <string name="alarms_still_ring">Alarms still ring</string>
+    <string name="schedule_turns_on">Turns on by itself on %1$s at %2$s</string>
+    <string name="schedule_turns_off">Turns off by itself on %1$s at %2$s</string>
+    <string name="today_blocked_title">Blocked today</string>
+    <plurals name="blocked_calls">
+        <item quantity="one">%d call</item>
+        <item quantity="other">%d calls</item>
+    </plurals>
+    <plurals name="blocked_notifications">
+        <item quantity="one">%d notification</item>
+        <item quantity="other">%d notifications</item>
+    </plurals>
+    <string name="nothing_blocked_today">Nothing yet today</string>
+    <string name="section_filters">What gets filtered</string>
+    <string name="section_more">More</string>
+    <plurals name="people_subtitle">
+        <item quantity="one">%d person can call you</item>
+        <item quantity="other">%d people can call you</item>
+    </plurals>
+    <string name="people_subtitle_none">Nobody yet</string>
+    <plurals name="apps_subtitle">
+        <item quantity="one">%d app</item>
+        <item quantity="other">%d apps</item>
+    </plurals>
+    <string name="schedule">Schedule</string>
+    <string name="schedule_off">Off</string>
+    <string name="schedule_summary">%1$s · %2$s to %3$s</string>
+    <string name="quiet_screen_subtitle">Apps you see while it is on</string>
+    <string name="options_subtitle">WhatsApp, repeated calls, Do Not Disturb</string>
+    <string name="all_ready">All set</string>
+    <string name="blocked_log">What I blocked</string>
+    <string name="blocked_log_empty">When quiet mode is on, the calls and notifications it blocked show up here.</string>
+    <string name="blocked_log_note">Kept only on this phone for 7 days, without message text.</string>
+    <string name="clear_log">Clear history</string>
+    <string name="clear_log_confirm">Clear the history?</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="today">Today</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="unknown_number">Hidden number</string>
+    <string name="call">Call</string>
+    <string name="schedule_enable">Turn on by schedule</string>
+    <string name="schedule_enable_desc">Turns on when it starts and off when it ends.</string>
+    <string name="schedule_days">Days</string>
+    <string name="schedule_from">From</string>
+    <string name="schedule_until">Until</string>
+    <string name="next_day">next day</string>
+    <string name="schedule_note">If you turn it off by hand, it stays off until the next scheduled time. Changes may take a few minutes.</string>
+    <string name="schedule_no_days">Pick at least one day.</string>
+    <string name="schedule_always">Stays on all the time.</string>
+    <string name="ok">OK</string>
+    <string name="silenced_section">Silenced</string>
+    <string name="other_apps_section">Other apps</string>
+    <string name="people_intro">While quiet mode is on, only calls from these people get through. Alarms still ring.</string>
 </resources>

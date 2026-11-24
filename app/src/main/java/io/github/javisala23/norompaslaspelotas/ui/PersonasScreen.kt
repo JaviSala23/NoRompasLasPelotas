@@ -13,6 +13,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Add
 import androidx.compose.material.icons.rounded.Contacts
 import androidx.compose.material.icons.rounded.Delete
+import androidx.compose.material.icons.rounded.People
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -40,7 +41,7 @@ fun PersonasScreen(config: Config, guardar: (Config) -> Unit, volver: () -> Unit
     Scaffold(
         snackbarHost = { SnackbarHost(snackbar) },
         floatingActionButton = {
-            ExtendedFloatingActionButton(
+            if (config.permitidos.isNotEmpty()) ExtendedFloatingActionButton(
                 onClick = { mostrarSheet = true },
                 icon = { Icon(Icons.Rounded.Add, contentDescription = null) },
                 text = { Text(stringResource(R.string.add)) },
@@ -50,16 +51,26 @@ fun PersonasScreen(config: Config, guardar: (Config) -> Unit, volver: () -> Unit
         PantallaConCabecera(stringResource(R.string.people), volver) { modifier ->
             LazyColumn(
                 modifier = modifier.fillMaxSize().padding(outerPadding),
-                contentPadding = PaddingValues(20.dp),
+                contentPadding = PaddingValues(start = 20.dp, end = 20.dp, top = 12.dp, bottom = 96.dp),
                 verticalArrangement = Arrangement.spacedBy(12.dp),
             ) {
                 if (config.permitidos.isEmpty()) {
                     item {
+                        Vacio(Icons.Rounded.People, stringResource(R.string.people_empty)) {
+                            Button(onClick = { mostrarSheet = true }, modifier = Modifier.areaTactilMinima()) {
+                                Icon(Icons.Rounded.Add, contentDescription = null)
+                                Spacer(Modifier.width(8.dp))
+                                Text(stringResource(R.string.add_person))
+                            }
+                        }
+                    }
+                } else {
+                    item {
                         Text(
-                            stringResource(R.string.people_empty),
-                            modifier = Modifier.fillMaxWidth().padding(vertical = 64.dp),
-                            textAlign = TextAlign.Center,
+                            stringResource(R.string.people_intro),
+                            style = MaterialTheme.typography.bodyMedium,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
                         )
                     }
                 }

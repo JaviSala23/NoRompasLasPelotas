@@ -54,7 +54,7 @@
     <string name="repeat_calls_description">La segunda llamada del mismo número en 15 minutos pasa.</string>
     <string name="use_system_dnd">Usar No molestar del sistema</string>
     <string name="use_system_dnd_description">Mantiene alarmas y contenido multimedia.</string>
-    <string name="version_name">Versión 0.2.0</string>
+    <string name="version_name">Versión 0.3.0</string>
     <string name="free_gpl">Libre y gratis, GPL-3.0</string>
     <string name="no_internet">No usa Internet</string>
     <string name="open_repository">Abrir repositorio</string>
@@ -80,4 +80,71 @@
     <string name="notification_channel_description">Muestra que el modo sigue prendido.</string>
     <string name="notification_title">Modo tranquilo activo</string>
     <string name="notification_text">Pasan %1$d personas · %2$d apps en silencio</string>
+    <string name="status_on_title">Modo tranquilo activo</string>
+    <string name="status_off_title">Modo tranquilo apagado</string>
+    <string name="status_off_body">Tu teléfono funciona normal.</string>
+    <string name="turn_off">Apagar</string>
+    <string name="nobody_can_call">No pasa ninguna llamada</string>
+    <plurals name="people_can_call">
+        <item quantity="one">Sólo pasan las llamadas de %d persona</item>
+        <item quantity="other">Sólo pasan las llamadas de %d personas</item>
+    </plurals>
+    <plurals name="apps_silenced_line">
+        <item quantity="one">%d app en silencio</item>
+        <item quantity="other">%d apps en silencio</item>
+    </plurals>
+    <string name="alarms_still_ring">Las alarmas suenan igual</string>
+    <string name="schedule_turns_on">Se prende sola el %1$s a las %2$s</string>
+    <string name="schedule_turns_off">Se apaga sola el %1$s a las %2$s</string>
+    <string name="today_blocked_title">Hoy frené</string>
+    <plurals name="blocked_calls">
+        <item quantity="one">%d llamada</item>
+        <item quantity="other">%d llamadas</item>
+    </plurals>
+    <plurals name="blocked_notifications">
+        <item quantity="one">%d notificación</item>
+        <item quantity="other">%d notificaciones</item>
+    </plurals>
+    <string name="nothing_blocked_today">Todavía nada hoy</string>
+    <string name="section_filters">Qué se filtra</string>
+    <string name="section_more">Más</string>
+    <plurals name="people_subtitle">
+        <item quantity="one">%d persona puede llamarte</item>
+        <item quantity="other">%d personas pueden llamarte</item>
+    </plurals>
+    <string name="people_subtitle_none">Nadie todavía</string>
+    <plurals name="apps_subtitle">
+        <item quantity="one">%d app</item>
+        <item quantity="other">%d apps</item>
+    </plurals>
+    <string name="schedule">Horario</string>
+    <string name="schedule_off">Apagado</string>
+    <string name="schedule_summary">%1$s · %2$s a %3$s</string>
+    <string name="quiet_screen_subtitle">Las apps que ves cuando está activo</string>
+    <string name="options_subtitle">WhatsApp, llamadas repetidas, No molestar</string>
+    <string name="all_ready">Todo listo</string>
+    <string name="blocked_log">Lo que frené</string>
+    <string name="blocked_log_empty">Cuando el modo esté activo, acá vas a ver las llamadas y notificaciones que frenó.</string>
+    <string name="blocked_log_note">Se guarda sólo en este teléfono durante 7 días, sin el texto de los mensajes.</string>
+    <string name="clear_log">Borrar historial</string>
+    <string name="clear_log_confirm">¿Borrar el historial?</string>
+    <string name="cancel">Cancelar</string>
+    <string name="delete">Borrar</string>
+    <string name="today">Hoy</string>
+    <string name="yesterday">Ayer</string>
+    <string name="unknown_number">Número oculto</string>
+    <string name="call">Llamada</string>
+    <string name="schedule_enable">Prender sola según horario</string>
+    <string name="schedule_enable_desc">Al empezar se prende y al terminar se apaga.</string>
+    <string name="schedule_days">Días</string>
+    <string name="schedule_from">Desde</string>
+    <string name="schedule_until">Hasta</string>
+    <string name="next_day">del día siguiente</string>
+    <string name="schedule_note">Si la apagás a mano, queda apagada hasta el próximo horario. El cambio puede demorar unos minutos.</string>
+    <string name="schedule_no_days">Elegí al menos un día.</string>
+    <string name="schedule_always">Queda prendida todo el tiempo.</string>
+    <string name="ok">Aceptar</string>
+    <string name="silenced_section">En silencio</string>
+    <string name="other_apps_section">Otras apps</string>
+    <string name="people_intro">Cuando el modo está activo, sólo pasan las llamadas de estas personas. Las alarmas suenan igual.</string>
 </resources>

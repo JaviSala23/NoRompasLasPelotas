@@ -4,7 +4,10 @@ import android.app.Notification
 import android.service.notification.NotificationListenerService
 import android.service.notification.StatusBarNotification
 import android.telecom.TelecomManager
+import io.github.javisala23.norompaslaspelotas.data.Bloqueo
 import io.github.javisala23.norompaslaspelotas.data.ConfigCache
+import io.github.javisala23.norompaslaspelotas.data.RegistroRepository
+import io.github.javisala23.norompaslaspelotas.data.TipoBloqueo
 import io.github.javisala23.norompaslaspelotas.data.EstadoCache
 import io.github.javisala23.norompaslaspelotas.data.Arranque
 import io.github.javisala23.norompaslaspelotas.domain.DecisionNotificacion
@@ -53,7 +56,14 @@ class FiltroNotificacionesService : NotificationListenerService() {
             extras.getBoolean(Notification.EXTRA_IS_GROUP_CONVERSATION), resumen,
             config.appsSilenciadas, config.permitidos.map { it.nombre }, config.whatsappSoloPermitidos,
         )
-        if (decision == DecisionNotificacion.CANCELA) cancelNotification(sbn.key)
+        if (decision == DecisionNotificacion.CANCELA) {
+            cancelNotification(sbn.key)
+            scope.launch {
+                RegistroRepository(this@FiltroNotificacionesService).agregar(
+                    Bloqueo(TipoBloqueo.NOTIFICACION, remitente.orEmpty(), System.currentTimeMillis(), sbn.packageName, sbn.key),
+                )
+            }
+        }
     }
     private fun protegido(paquete: String): Boolean {
         val dialer = getSystemService(TelecomManager::class.java).defaultDialerPackage

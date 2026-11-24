@@ -25,12 +25,15 @@ class MainActivity : ComponentActivity() {
             AppTheme {
                 val activo by viewModel.activo.collectAsStateWithLifecycle()
                 val config by viewModel.config.collectAsStateWithLifecycle()
+                val registro by viewModel.registro.collectAsStateWithLifecycle()
                 AppPrincipal(
                     activo = activo,
                     config = config,
+                    registro = registro,
                     refreshPermisos = refreshPermisos,
                     onActivoChange = viewModel::cambiarEstado,
                     onConfigChange = viewModel::guardarConfig,
+                    onBorrarRegistro = viewModel::borrarRegistro,
                 )
             }
         }

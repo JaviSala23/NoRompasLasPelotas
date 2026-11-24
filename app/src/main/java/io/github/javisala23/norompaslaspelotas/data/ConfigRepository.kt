@@ -8,6 +8,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
+import io.github.javisala23.norompaslaspelotas.domain.Horario
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 
@@ -26,6 +27,7 @@ data class Config(
     val appsInicio: List<String> = emptyList(),
     val onboardingHecho: Boolean = false,
     val sugerenciasAppsAplicadas: Boolean = false,
+    val horario: Horario = Horario(),
 )
 
 object ConfigCache {

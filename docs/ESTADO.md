@@ -54,3 +54,7 @@ pasando en palabras, filas con el valor actual, grupos. (2) Registro "Lo que fre
 DataStore registro_bloqueos). (3) Horario: días + desde/hasta, AlarmManager inexacto
 (setAndAllowWhileIdle, sin permiso de alarmas exactas), HorarioReceiver; al empezar prende, al
 terminar apaga. (4) Pulir: apps cargan en segundo plano con secciones, personas con vacío mejor.
+- HECHO y publicada como pre-release v0.3.0 (code 4): Inicio nuevo (tarjeta de estado,
+  grupos con valores), RegistroScreen, HorarioScreen + Programador/HorarioReceiver, paleta completa
+  (antes M3 metía lila en las tarjetas), apps en segundo plano. Build+tests (HorarioTest) +lint OK.
+  Sin probar en dispositivo. Pendiente: que Javi lo pruebe.
