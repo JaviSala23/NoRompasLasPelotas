@@ -35,6 +35,8 @@ class FiltroNotificacionesService : NotificationListenerService() {
     private fun procesar(sbn: StatusBarNotification) {
         if (!EstadoCache.activo.value || protegido(sbn.packageName)) return
         val n = sbn.notification
+        // Las alarmas nunca se tocan, aunque la app del reloj esté silenciada.
+        if (n.category == Notification.CATEGORY_ALARM) return
         val resumen = n.flags and Notification.FLAG_GROUP_SUMMARY != 0
         val extras = n.extras
         val mensajes = if (android.os.Build.VERSION.SDK_INT >= 30) {

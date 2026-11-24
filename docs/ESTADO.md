@@ -41,3 +41,8 @@
 - v0.2.0 publicada: rediseño (Codex, spec docs/CODEX_V0_2.md) + arreglos de auditoría (modifier que
   descartaba clickable, recurso del manifest con variante en inglés).
 - Pendiente: que Javi pruebe 0.2.0 en el celu (rol de llamadas, WhatsApp, launcher).
+
+## 2026-11-23 (v0.2.1)
+- Ya no hay Codex: Claude implementa directo.
+- Arreglo: el filtro de notificaciones nunca cancela CATEGORY_ALARM (aunque el Reloj esté silenciado).
+  El DND del sistema ya dejaba pasar alarmas. Sin probar en dispositivo.
