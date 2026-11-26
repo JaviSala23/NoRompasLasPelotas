@@ -76,3 +76,4 @@ terminar apaga. (4) Pulir: apps cargan en segundo plano con secciones, personas 
   WebAPK de Chrome ya aparecían como apps normales.
 - Pendiente: quitar un atajo fijado desde el inicio (hoy no se puede). Sin probar en dispositivo.
 - Publicada pre-release v0.3.2: https://github.com/JaviSala23/NoRompasLasPelotas/releases/tag/v0.3.2
+- Javi lo probó en su celu: con 0.3.2 Chrome ya ofrece instalar la PWA. Confirmado.
