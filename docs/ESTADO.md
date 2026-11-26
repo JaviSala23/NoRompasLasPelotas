@@ -66,3 +66,12 @@ terminar apaga. (4) Pulir: apps cargan en segundo plano con secciones, personas 
   entrar, punto que respira, deslizar hacia arriba → todas las apps; con el modo activo las silenciadas
   se ocultan y sólo aparecen buscándolas, con pausa de 5 s ("Respirá") antes de abrirlas.
 - Publicada pre-release v0.3.1. Sin probar en dispositivo.
+
+## 2026-11-26 (v0.3.2 — aceptar íconos de otras apps)
+- Problema de Javi: con NoRompasLasPelotas como inicio predeterminado, Chrome no ofrecía "Instalar app"
+  ni "Agregar a la pantalla principal" (la PWA de AGL Balanza). Causa: el inicio no tenía actividad para
+  CONFIRM_PIN_SHORTCUT, entonces isRequestPinShortcutSupported() = false y Chrome esconde esas opciones.
+- FijarAtajoActivity (translúcida) acepta los pedidos de atajos (no widgets) con un toast. InicioActivity
+  lista también los atajos fijados (LauncherApps FLAG_MATCH_PINNED) y los abre con startShortcut. Las
+  WebAPK de Chrome ya aparecían como apps normales.
+- Pendiente: quitar un atajo fijado desde el inicio (hoy no se puede). Sin probar en dispositivo.

@@ -45,6 +45,17 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".ui.inicio.FijarAtajoActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:noHistory="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.content.pm.action.CONFIRM_PIN_SHORTCUT" />
+            </intent-filter>
+        </activity>
+
         <service
             android:name=".service.ModoService"
             android:exported="false"

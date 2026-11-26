@@ -135,7 +135,10 @@ private fun InicioTranquilo(reanudaciones: Int) {
         listaAbierta = false
         pausaPara = null
         ahora = Date()
-        todas = withContext(Dispatchers.IO) { appsLanzables(context).filter { it.paquete != context.packageName } }
+        todas = withContext(Dispatchers.IO) {
+            (appsLanzables(context).filter { it.paquete != context.packageName } + atajosFijados(context))
+                .sortedBy { it.nombre.lowercase() }
+        }
     }
     BackHandler {
         when {
@@ -143,13 +146,13 @@ private fun InicioTranquilo(reanudaciones: Int) {
             listaAbierta -> { listaAbierta = false; buscar = "" }
         }
     }
-    val abrir = { app: AppLanzable -> abrirApp(context, app.paquete) }
+    val abrir = { app: AppLanzable -> abrirApp(context, app) }
 
     Box(Modifier.fillMaxSize().background(paleta.fondo)) {
         if (activo) {
             ModoActivo(
                 ahora,
-                config.appsInicio.mapNotNull { paquete -> todas.find { it.paquete == paquete } },
+                config.appsInicio.mapNotNull { paquete -> todas.find { it.paquete == paquete && it.atajo == null } },
                 reanudaciones,
                 abrir,
             ) { listaAbierta = true }
@@ -289,7 +292,7 @@ private fun ListaApps(
             Text(stringResource(R.string.no_results), color = paleta.gris, fontSize = 16.sp, modifier = Modifier.padding(vertical = 16.dp))
         }
         LazyColumn(Modifier.weight(1f), contentPadding = PaddingValues(bottom = 24.dp)) {
-            itemsIndexed(visibles, key = { _, app -> app.paquete }) { i, app ->
+            itemsIndexed(visibles, key = { _, app -> app.clave }) { i, app ->
                 Aparecer(2 + i, entrada) {
                     if (app.paquete in ocultas) {
                         Column(Modifier.padding(vertical = 6.dp)) {

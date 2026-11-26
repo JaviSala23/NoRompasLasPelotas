@@ -162,4 +162,5 @@
     <string name="background_sand">Arena</string>
     <string name="no_results">No hay apps con ese nombre</string>
     <string name="detox_note">Mientras está activo, las apps silenciadas no aparecen. Si buscás una, te pide una pausa antes de abrirla.</string>
+    <string name="shortcut_added">Agregado a tus apps: %1$s</string>
 </resources>
