@@ -75,3 +75,4 @@ terminar apaga. (4) Pulir: apps cargan en segundo plano con secciones, personas 
   lista también los atajos fijados (LauncherApps FLAG_MATCH_PINNED) y los abre con startShortcut. Las
   WebAPK de Chrome ya aparecían como apps normales.
 - Pendiente: quitar un atajo fijado desde el inicio (hoy no se puede). Sin probar en dispositivo.
+- Publicada pre-release v0.3.2: https://github.com/JaviSala23/NoRompasLasPelotas/releases/tag/v0.3.2
